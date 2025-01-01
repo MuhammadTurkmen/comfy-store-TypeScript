@@ -1,4 +1,12 @@
+import { Button } from "@/components/ui/button";
+
 function App() {
-  return <div className="text-4xl text-gray-400 bg-red-200 p-4">App</div>;
+  return (
+    <div className="text-4xl p-4">
+      <Button variant="destructive" size="lg">
+        Click me
+      </Button>
+    </div>
+  );
 }
 export default App;
