@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useAppSelector } from "./hooks";
 function App() {
   const { name } = useAppSelector((state) => state.userState);
-  console.log();
+  console.log(name);
 
   return (
     <div className="text-4xl p-4">
