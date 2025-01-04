@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { useAppSelector } from "./hooks";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
 import {
   Error,
   About,
@@ -14,20 +14,18 @@ import {
   SingleProduct,
 } from "./pages";
 
-function App() {
-  const { name } = useAppSelector((state) => state.userState);
-  console.log(name);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Landing />,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
+  },
+]);
 
-  return (
-    <div className="text-4xl p-4">
-      <Button
-        variant="destructive"
-        size="lg"
-        onClick={() => console.log("it worked")}
-      >
-        Click me
-      </Button>
-    </div>
-  );
+function App() {
+  return <RouterProvider router={router} />;
 }
 export default App;
