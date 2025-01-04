@@ -4,6 +4,8 @@ function HomeLayout() {
   return (
     <>
       <header>header</header>
+      <nav>navbar</nav>
+      <Outlet />
     </>
   );
 }
