@@ -3,12 +3,15 @@ import { Button } from "./ui/button";
 import { useState } from "react";
 
 function Header() {
+  const navigate = useNavigate();
+  // temp
   const [user, setUser] = useState<{ username: string } | null>({
     username: "demo user",
   });
 
   const handleLogout = () => {
     setUser(null);
+    navigate("/");
   };
 
   return (
