@@ -10,9 +10,14 @@ function CartButton() {
       asChild
       variant="outline"
       size="icon"
-      className="flex justify-center items-center"
+      className="flex justify-center items-center relative"
     >
-      CartButton
+      <Link to="/cart">
+        <ShoppingCart />
+        <span className="absolute -top-3 -right-3 bg-primary text-white rounded-full">
+          {numItemsInCart}
+        </span>
+      </Link>
     </Button>
   );
 }
