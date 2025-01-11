@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import themeReducer from "@/featuers/theme/themeSlice";
 import cartReducer from "@/featuers/cart/cartSlice";
 import userReducer from "@/featuers/user/userSlice";
-// ...
+// ....
 
 export const store = configureStore({
   reducer: {
