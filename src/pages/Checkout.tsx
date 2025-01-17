@@ -13,7 +13,7 @@ function Checkout() {
   return (
     <>
       <SectionTitle text="Place your order" />
-      <div></div>
+      <div className="mt-8 grid gap-8 md-grid-cols-2 items-start"></div>
     </>
   );
 }
