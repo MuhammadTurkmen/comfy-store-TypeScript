@@ -1,4 +1,9 @@
+
+import { Hero, FeaturedProdocts } from "@/components";
 function Landing() {
-  return <div>Landing</div>;
+  return <>
+  <Hero />
+  <FeaturedProdocts />
+  </>;
 }
 export default Landing;
