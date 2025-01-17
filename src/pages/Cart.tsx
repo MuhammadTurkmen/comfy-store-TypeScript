@@ -24,15 +24,13 @@ function Cart() {
         </div>
         <div className="lg:col-span-4 lg:pl-4">
           <CartTotals />
-          {user ? (
-            <Button asChild className="mt-8 w-full">
+          <Button asChild className="mt-8 w-full">
+            {user ? (
               <Link to={"/checkout"}>Proceed to checkout</Link>
-            </Button>
-          ) : (
-            <Button asChild className="mt-8 w-full">
+            ) : (
               <Link to={"/login"}>Please login</Link>
-            </Button>
-          )}
+            )}
+          </Button>
         </div>
       </div>
     </>
