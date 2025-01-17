@@ -10,6 +10,11 @@ function Checkout() {
     return <SectionTitle text="Your Cart is empty" />;
   }
 
-  return <div>Checkout</div>;
+  return (
+    <>
+      <SectionTitle text="Place your order" />
+      <div></div>
+    </>
+  );
 }
 export default Checkout;
