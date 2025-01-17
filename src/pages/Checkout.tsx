@@ -5,7 +5,7 @@ import { type ReduxStore } from "@/store";
 import { toast } from "@/hooks/use-toast";
 
 function Checkout() {
-  const cartTotal = useAppSelector((state) => state.userState.user);
+  const cartTotal = useAppSelector((state) => state.cartState.cartTotal);
   return <div>Checkout</div>;
 }
 export default Checkout;
