@@ -6,7 +6,12 @@ function ProductsGrid() {
   const {data:products} = useLoaderData()  as ProductsResponse
   
   return (
-    <div>ProductsGrid</div>
+    <div className="p-12 grid gap-4 md:grid-cols-2  lg:grid-cols-3">
+      {products.map((products) => {
+        const {title, price ,image} = products.attributes
+        return <Link  to={`/products/`} ></Link>
+      })}
+    </div>
   )
 }
 
