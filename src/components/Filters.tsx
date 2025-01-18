@@ -10,11 +10,17 @@ function Filters() {
         <Label htmlFor="search">Search Product</Label>
         <Input id="search" name="search" type="text" defaultValue="" />
       </div>
-      <Button type="submit" size="sm" className="self-end mb-">
+      <Button type="submit" size="sm" className="self-end mb-2">
         Search
       </Button>
-      <Button type="button" asChild size={"sm"} variant={"outline"}>
-        {" "}
+      <Button
+        type="button"
+        asChild
+        size={"sm"}
+        variant={"outline"}
+        className="self-end mb-2"
+      >
+        <Link to="/products">reset</Link>
       </Button>
     </Form>
   );
