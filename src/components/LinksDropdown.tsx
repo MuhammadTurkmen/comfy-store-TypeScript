@@ -28,6 +28,7 @@ function LinksDropdown() {
         {links.map((link) => {
           const restrictedRoutes =
             link.href === "checkout" || link.href === "orders";
+          if (restrictedRoutes && !user) return null;
           return (
             <DropdownMenuItem key={link.label}>
               <NavLink
