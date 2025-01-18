@@ -13,8 +13,8 @@ function Header() {
 
   const user = useAppSelector((state) => state.userState.user);
   const handleLogout = () => {
-    setUser(null);
-    navigate("/");
+    diapatch(clearCart());
+    diapatch(logoutUser());
   };
 
   return (
