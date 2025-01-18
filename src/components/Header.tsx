@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
 import { useAppDispatch, useAppSelector } from "@/hooks";
 
-import { loginUser } from "@/featuers/user/userSlice";
+import { logoutUser } from "@/featuers/user/userSlice";
 import { clearCart } from "@/featuers/cart/cartSlice";
 import { useToast } from "@/hooks/use-toast";
 
@@ -15,6 +15,7 @@ function Header() {
   const handleLogout = () => {
     diapatch(clearCart());
     diapatch(logoutUser());
+    toast({ description: "Logged Out" });
   };
 
   return (
