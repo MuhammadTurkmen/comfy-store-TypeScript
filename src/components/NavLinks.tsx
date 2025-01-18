@@ -1,10 +1,13 @@
 import { links } from "@/utils";
 import { NavLink } from "react-router-dom";
+import { useAppSelector } from "@/hooks";
 
 function NavLinks() {
+  const user = useAppSelector((state) => state.userState.user)
   return (
     <div className="hidden lg:flex justify-center items-center gap-x-4">
       {links.map((link) => {
+        const restrictedRoutes = 
         return (
           <NavLink
             to={link.href}
