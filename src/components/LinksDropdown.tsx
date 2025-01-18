@@ -26,6 +26,8 @@ function LinksDropdown() {
         sideOffset={25}
       >
         {links.map((link) => {
+          const restrictedRoutes =
+            link.href === "checkout" || link.href === "orders";
           return (
             <DropdownMenuItem key={link.label}>
               <NavLink
