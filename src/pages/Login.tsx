@@ -31,7 +31,7 @@ export const action =
       return redirect("/");
     } catch (error) {
       console.log(error);
-      toast({ description: "Login Faild" });
+      toast({ description: "Login Faildd" });
 
       return null;
     }
