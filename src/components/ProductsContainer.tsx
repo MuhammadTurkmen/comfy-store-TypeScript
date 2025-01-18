@@ -8,6 +8,11 @@ import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
 
 function ProductsContainer() {
+  const { meta } = useLoaderData() as ProductsResponse;
+  const totalProducts = meta.pagination.total;
+
+  const [layout, setLayout] = useState<"grid" | "list">("grid");
+
   return (
     <div>
       <ProductsList />
