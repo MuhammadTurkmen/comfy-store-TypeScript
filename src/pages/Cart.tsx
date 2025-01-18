@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 function Cart() {
   // temp
-  const user = null;
+  const user = useAppSelector((state) => state.userState.user);
 
   const numItemsInCart = useAppSelector(
     (state) => state.cartState.numItemsInCart
