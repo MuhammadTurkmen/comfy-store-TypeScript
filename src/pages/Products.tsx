@@ -1,12 +1,16 @@
 import { Filters, ProductsContainer, PaginationContainer } from "@/components";
-import { customFetch, type ProductsResponse } from "../utils";
+import {
+  customFetch,
+  type ProductsResponse,
+  type ProductsResponseWithParams,
+} from "../utils";
 import { type LoaderFunction } from "react-router-dom";
 
 const url = "/products";
 
 export const loader: LoaderFunction = async ({
   request,
-}): Promise<ProductsResponse> => {
+}): Promise<ProductsResponseWithParams> => {
   const params = Object.fromEntries([
     ...new URL(request.url).searchParams.entries(),
   ]);
