@@ -16,6 +16,7 @@ function Header() {
     diapatch(clearCart());
     diapatch(logoutUser());
     toast({ description: "Logged Out" });
+    navigate("/");
   };
 
   return (
