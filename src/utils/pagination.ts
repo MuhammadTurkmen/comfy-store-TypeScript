@@ -27,6 +27,8 @@ export const constructPrevOrNextUrl = ({
   search,
   pathname,
 }: ConstructPrevOrNextParams): { prevUrl: string; nextUrl: string } => {
+  let prevPage = currentPage - 1;
+  if (prevPage < 1) prevPage = pageCount;
   const prevUrl = "/products";
   const nextUrl = "/products";
   return { prevUrl, nextUrl };
