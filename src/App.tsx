@@ -22,6 +22,7 @@ import { loader as singleProductsLoader } from "./pages/SingleProduct";
 
 import { action as registerUser } from "@/pages/Register";
 import { action as loginUser } from "@/pages/Login";
+import { store } from "./store";
 
 const router = createBrowserRouter([
   {
