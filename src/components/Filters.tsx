@@ -43,6 +43,13 @@ function Filters() {
 
       {/* PRICE */}
       <FormRange label="price" name="price" defaultValue={price} />
+
+      {/* SHIPPING */}
+      <FormCheckbox
+        label="free shipping"
+        name="shipping"
+        defaultValue={shipping}
+      />
       <Button type="submit" size="sm" className="self-end mb-2">
         Search
       </Button>
