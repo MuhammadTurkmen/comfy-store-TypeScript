@@ -4,12 +4,14 @@ type ConstructUrlParams = {
   pathname: string;
 };
 
-export const constractUrl = ({
+export const constructUrl = ({
   pageNumber,
   search,
   pathname,
 }: ConstructUrlParams): string => {
-  return "/products";
+  const searchParams = new URLSearchParams(search);
+  searchParams.set("page", pageNumber.toString());
+  return `${pathname}?${searchParams.toString()}`;
 };
 
 type ConstructPrevOrNextParams = {
