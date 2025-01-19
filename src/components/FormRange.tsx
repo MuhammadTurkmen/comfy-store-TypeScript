@@ -17,7 +17,10 @@ function FormRange({ name, label, defaultValue }: FormRangeProps) {
 
   return (
     <div className="mb-2">
-      <Label htmlFor={name} className="capitalize flex justify-between"></Label>
+      <Label htmlFor={name} className="capitalize flex justify-between">
+        {label || name}
+        <span>{formatAsDollars(selectedPrice)}</span>
+      </Label>
     </div>
   );
 }
