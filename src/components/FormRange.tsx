@@ -6,7 +6,7 @@ import { Slider } from "./ui/slider";
 type FormRangeProps = {
   name: string;
   label?: string;
-  defaltValue?: string;
+  defaultValue?: string;
 };
 
 function FormRange({ name, label, defaultValue }: FormRangeProps) {

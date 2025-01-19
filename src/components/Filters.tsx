@@ -2,7 +2,7 @@ import { Form, useLoaderData, Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { ProductsResponseWithParams } from "@/utils";
 import FormInput from "./FormInput";
-import { FormRange, FormSelect } from ".";
+import { FormRange, FormSelect, FormCheckbox } from ".";
 
 function Filters() {
   const { meta, params } = useLoaderData() as ProductsResponseWithParams;
