@@ -20,7 +20,15 @@ export const action: ActionFunction = async ({
 }): Promise<Response | null> => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
-  return data;
+  try {
+    const response: AxiosResponse = await customFetch.post("/auth/local", data);
+    const username = response.data.user.username;
+    const jwt = response.data.jwt;
+
+    return redirect("/");
+  } catch (error) {
+    return null;
+  }
 };
 
 function Login() {
