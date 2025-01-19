@@ -41,6 +41,8 @@ function Filters() {
         defaultValue={order}
       />
 
+      {/* PRICE */}
+      <FormRange label="price" name="price" defaultValue={price} />
       <Button type="submit" size="sm" className="self-end mb-2">
         Search
       </Button>
