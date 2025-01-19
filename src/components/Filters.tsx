@@ -1,13 +1,21 @@
 import { Form, useLoaderData, Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { ProductsResponseWithParams } from "@/utils";
+import FormInput from "./FormInput";
 
 function Filters() {
   const { meta, params } = useLoaderData() as ProductsResponseWithParams;
-  const { search } = params;
+  const { search, company, category, shipping, order, price } = params;
 
   return (
     <Form className="border rounded-md px-8 py-4 grid gap-x-4 gap-y-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
+      {/* Search */}
+      <FormInput
+        type="search"
+        label="search products"
+        name="search"
+        defaultValue={search}
+      />
       <Button type="submit" size="sm" className="self-end mb-2">
         Search
       </Button>
