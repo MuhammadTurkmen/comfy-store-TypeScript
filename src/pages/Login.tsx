@@ -27,9 +27,11 @@ export const action =
       );
       const username = response.data.user.username;
       const jwt = response.data.jwt;
-
+      store.dispatch(loginUser({ username, jwt }));
       return redirect("/");
     } catch (error) {
+      console.log(error);
+
       return null;
     }
   };
