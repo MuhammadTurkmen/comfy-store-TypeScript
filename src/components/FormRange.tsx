@@ -21,6 +21,15 @@ function FormRange({ name, label, defaultValue }: FormRangeProps) {
         {label || name}
         <span>{formatAsDollars(selectedPrice)}</span>
       </Label>
+      <Slider
+        id={name}
+        name={name}
+        step={step}
+        max={maxPrice}
+        value={[selectedPrice]}
+        onValueChange={(value) => setSelectedPrice(value[0])}
+        className="mt-4"
+      />
     </div>
   );
 }
