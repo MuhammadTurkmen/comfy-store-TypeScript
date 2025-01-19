@@ -15,21 +15,24 @@ import { useAppDispatch } from "@/hooks";
 import { AxiosResponse } from "axios";
 import { loginUser } from "@/featuers/user/userSlice";
 
-export const action: ActionFunction = async ({
-  request,
-}): Promise<Response | null> => {
-  const formData = await request.formData();
-  const data = Object.fromEntries(formData);
-  try {
-    const response: AxiosResponse = await customFetch.post("/auth/local", data);
-    const username = response.data.user.username;
-    const jwt = response.data.jwt;
+export const action =
+  (store: ReduxStore): ActionFunction =>
+  async ({ request }): Promise<Response | null> => {
+    const formData = await request.formData();
+    const data = Object.fromEntries(formData);
+    try {
+      const response: AxiosResponse = await customFetch.post(
+        "/auth/local",
+        data
+      );
+      const username = response.data.user.username;
+      const jwt = response.data.jwt;
 
-    return redirect("/");
-  } catch (error) {
-    return null;
-  }
-};
+      return redirect("/");
+    } catch (error) {
+      return null;
+    }
+  };
 
 function Login() {
   const dispatch = useAppDispatch();
