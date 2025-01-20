@@ -17,15 +17,16 @@ import { AxiosResponse } from "axios";
 import { loginUser } from "@/featuers/user/userSlice";
 
 function Login() {
-  const dispatch = useAppDispatch()
-  const navigate = useNavigate()
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
-  const loginAsGuestUser = async () :Promise<void> => {
+  const loginAsGuestUser = async (): Promise<void> => {
     try {
-      const response:AxiosResponse = await 
-    } catch (error) {
-      
-    }
+      const response: AxiosResponse = await customFetch.post("/auth//local", {
+        identifier: "test@test.com",
+        password: "secret",
+      });
+    } catch (error) {}
   };
 
   return (
