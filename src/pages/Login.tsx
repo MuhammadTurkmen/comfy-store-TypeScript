@@ -27,6 +27,7 @@ function Login() {
           <Form method="post">
             <FormInput type="email" label="email" name="identifier" />
             <FormInput type="password" name="password" />
+            <SubmitBtn text="Login" className="w-full mt-4" />
           </Form>
         </CardContent>
       </Card>
