@@ -22,7 +22,7 @@ function Login() {
 
   const loginAsGuestUser = async (): Promise<void> => {
     try {
-      const response: AxiosResponse = await customFetch.post("/auth//local", {
+      const response: AxiosResponse = await customFetch.post("/auth/local", {
         identifier: "test@test.com",
         password: "secret",
       });
