@@ -15,6 +15,12 @@ import { useAppDispatch } from "@/hooks";
 import { AxiosResponse } from "axios";
 import { loginUser } from "@/featuers/user/userSlice";
 
+export const action: ActionFunction = async ({
+  request,
+}): Promise<Response | null> => {
+  return null;
+};
+
 function Login() {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
