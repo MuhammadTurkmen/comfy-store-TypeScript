@@ -18,6 +18,8 @@ import { loginUser } from "@/featuers/user/userSlice";
 export const action: ActionFunction = async ({
   request,
 }): Promise<Response | null> => {
+  const formData = await request.formData();
+  const data = Object.fromEntries(formData);
   return null;
 };
 
