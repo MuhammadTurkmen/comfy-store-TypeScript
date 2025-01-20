@@ -10,7 +10,11 @@ function SubmitBtn({ text, className }: { text: string; className?: string }) {
       type="submit"
       className={className}
       disabled={isSubmitting}
-    ></Button>
+    >
+      {isSubmitting  ? <span className="flex">
+        <ReloadIcon className="mr-2 h-4 w-4 animate-spin"/>
+      </span>}
+    </Button>
   );
 }
 
