@@ -25,7 +25,8 @@ function Login() {
         </CardHeader>
         <CardContent>
           <Form method="post">
-            <FormInput type="email" label="email" name="identfier" />
+            <FormInput type="email" label="email" name="identifier" />
+            <FormInput type="password" name="password" />
           </Form>
         </CardContent>
       </Card>
