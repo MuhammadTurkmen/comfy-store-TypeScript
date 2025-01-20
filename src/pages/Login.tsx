@@ -17,8 +17,15 @@ import { AxiosResponse } from "axios";
 import { loginUser } from "@/featuers/user/userSlice";
 
 function Login() {
-  const loginAsGuestUser = () => {
-    console.log("guest user");
+  const dispatch = useAppDispatch()
+  const navigate = useNavigate()
+
+  const loginAsGuestUser = async () :Promise<void> => {
+    try {
+      const response:AxiosResponse = await 
+    } catch (error) {
+      
+    }
   };
 
   return (
