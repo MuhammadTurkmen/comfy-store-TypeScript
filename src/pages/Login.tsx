@@ -20,7 +20,7 @@ export const action: ActionFunction = async ({
 }): Promise<Response | null> => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
-  return null;
+  return data;
 };
 
 function Login() {
