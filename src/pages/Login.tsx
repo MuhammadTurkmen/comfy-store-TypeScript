@@ -28,6 +28,8 @@ function Login() {
       });
       const username = response.data.user.username;
       const jwt = response.data.jwt;
+      dispatch(loginUser({ username, jwt }));
+      navigate("/");
     } catch (error) {}
   };
 
