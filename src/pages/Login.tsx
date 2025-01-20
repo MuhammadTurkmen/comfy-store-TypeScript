@@ -23,6 +23,11 @@ function Login() {
         <CardHeader>
           <CardTitle className="text-center">Login</CardTitle>
         </CardHeader>
+        <CardContent>
+          <Form method="post">
+            <FormInput type="email" label="email" name="identfier" />
+          </Form>
+        </CardContent>
       </Card>
     </section>
   );
