@@ -11,7 +11,6 @@ import { SubmitBtn, FormInput } from "@/components";
 import { customFetch } from "@/utils";
 import { toast } from "@/hooks/use-toast";
 import { type ReduxStore } from "@/store";
-
 import { useAppDispatch } from "@/hooks";
 import { AxiosResponse } from "axios";
 import { loginUser } from "@/featuers/user/userSlice";
@@ -30,7 +29,10 @@ function Login() {
       const jwt = response.data.jwt;
       dispatch(loginUser({ username, jwt }));
       navigate("/");
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+      toast({ description: "Login Faild" });
+    }
   };
 
   return (
