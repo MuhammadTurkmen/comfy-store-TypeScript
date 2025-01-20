@@ -26,6 +26,8 @@ function Login() {
         identifier: "test@test.com",
         password: "secret",
       });
+      const username = response.data.user.username;
+      const jwt = response.data.jwt;
     } catch (error) {}
   };
 
