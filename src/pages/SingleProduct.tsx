@@ -39,8 +39,22 @@ function SingleProduct() {
         </Button>
         <Separator orientation="vertical" />
         <Button asChild variant={"link"} size={"sm"}>
-          <Link to={"/products"}>Home</Link>
+          <Link to={"/products"}>Product</Link>
         </Button>
+      </div>
+      {/* Product */}
+      <div className="mt-6 grid gap-y-8 lg:grid-cols-2 lg:gap-x-16">
+        {/* IMAGE FIRST CAL */}
+
+        <img
+          src={image}
+          alt={title}
+          className="w-96 h-96 object-cover rounded-lg lg:w-full"
+        />
+        {/* PRODUCT INFO SECOND COL */}
+        <div>
+          <h1 className="capitalize text-3xl font-bold">{title}</h1>
+        </div>
       </div>
     </section>
   );
