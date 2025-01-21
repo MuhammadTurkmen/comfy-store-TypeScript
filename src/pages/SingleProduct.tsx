@@ -60,7 +60,7 @@ function SingleProduct() {
           </p>
           <p className="mt-6 leading-8">{description}</p>
           {/* COLORS */}
-          <SelectProductColor />
+          <SelectProductColor colors={colors} />
           {/* AMOUNT */}
           <SelectProductAmount />
           {/* CART BUTTON */}
