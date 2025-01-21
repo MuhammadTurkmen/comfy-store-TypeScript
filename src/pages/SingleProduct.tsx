@@ -59,6 +59,14 @@ function SingleProduct() {
             {dollarsAmount}
           </p>
           <p className="mt-6 leading-8">{description}</p>
+          {/* COLORS */}
+          <SelectProductColor />
+          {/* AMOUNT */}
+          <SelectProductAmount />
+          {/* CART BUTTON */}
+          <Button size={"lg"} className="mt-10" onClick={addToCart}>
+            Add to bag{" "}
+          </Button>
         </div>
       </div>
     </section>
