@@ -31,6 +31,8 @@ export const constructPrevOrNextUrl = ({
   if (prevPage < 1) prevPage = pageCount;
   const prevUrl = constructUrl({ pageNumber: prevPage, search, pathname });
 
-  const nextUrl = "/products";
+  let nextPage = currentPage + 1;
+  if (nextPage > pageCount) nextPage = 1;
+  const nextUrl = constructUrl({ pageNumber: nextPage, search, pathname });
   return { prevUrl, nextUrl };
 };
