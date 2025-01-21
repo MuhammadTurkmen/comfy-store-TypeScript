@@ -38,6 +38,9 @@ function SingleProduct() {
           <Link to={"/"}>Home</Link>
         </Button>
         <Separator orientation="vertical" />
+        <Button asChild variant={"link"} size={"sm"}>
+          <Link to={"/products"}>Home</Link>
+        </Button>
       </div>
     </section>
   );
