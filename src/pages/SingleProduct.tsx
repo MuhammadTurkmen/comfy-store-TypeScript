@@ -54,6 +54,11 @@ function SingleProduct() {
         {/* PRODUCT INFO SECOND COL */}
         <div>
           <h1 className="capitalize text-3xl font-bold">{title}</h1>
+          <h4 className="text-xl mt-2">{company}</h4>
+          <p className="mt-3 text-md bg-muted inline-block p-2 rounded-md">
+            {dollarsAmount}
+          </p>
+          <p className="mt-6 leading-8">{description}</p>
         </div>
       </div>
     </section>
