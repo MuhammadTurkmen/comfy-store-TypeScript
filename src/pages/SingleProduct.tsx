@@ -21,6 +21,10 @@ export const loader: LoaderFunction = async ({
 };
 
 function SingleProduct() {
+  const { data: product } = useLoaderData() as SingleProductResponse;
+  const { image, title, price, description, colors, company } =
+    product.attributes;
+  const dollarsAmount = formatAsDollars(price);
   return <div>SingleProduct</div>;
 }
 export default SingleProduct;
