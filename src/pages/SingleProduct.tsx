@@ -11,6 +11,8 @@ import { Separator } from "@/components/ui/separator";
 import { SelectProductAmount, SelectProductColor } from "@/components";
 import { type LoaderFunction } from "react-router-dom";
 
+export const loader: LoaderFunction = async () => {};
+
 function SingleProduct() {
   return <div>SingleProduct</div>;
 }
