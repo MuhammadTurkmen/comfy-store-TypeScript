@@ -25,6 +25,12 @@ function SingleProduct() {
   const { image, title, price, description, colors, company } =
     product.attributes;
   const dollarsAmount = formatAsDollars(price);
+  const [productColor, setProductColor] = useState(colors[0]);
+  const [amount, setAmount] = useState(1);
+
+  const addToCart = () => {
+    console.log("add to cart");
+  };
   return <div>SingleProduct</div>;
 }
 export default SingleProduct;
