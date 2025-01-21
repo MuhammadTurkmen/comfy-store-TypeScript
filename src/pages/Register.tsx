@@ -24,6 +24,7 @@ export const action: ActionFunction = async ({
         ? error.response?.data.error.message
         : "Registeration Faild";
     toast({ description: errorMsg });
+    console.log(error);
 
     return null;
   }
