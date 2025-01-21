@@ -31,6 +31,15 @@ function SingleProduct() {
   const addToCart = () => {
     console.log("add to cart");
   };
-  return <div>SingleProduct</div>;
+  return (
+    <section>
+      <div className="flex gap-x-2 h-6 items-center">
+        <Button asChild variant={"link"} size={"sm"}>
+          <Link to={"/"}>Home</Link>
+        </Button>
+        <Separator orientation="vertical" />
+      </div>
+    </section>
+  );
 }
 export default SingleProduct;
