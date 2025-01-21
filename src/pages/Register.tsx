@@ -14,8 +14,7 @@ export const action: ActionFunction = async ({
   console.log(data);
 
   try {
-    const result = await customFetch.post("/auth/local/register", data);
-    console.log(result);
+    await customFetch.post("/auth/local/register", data);
     toast({ description: "Registered" });
     return redirect("/login");
   } catch (error) {
