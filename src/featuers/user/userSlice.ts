@@ -25,7 +25,9 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     loginUser: () => {},
-    logoutUser: () => {},
+    logoutUser: (state) => {
+      state.user = null;
+    },
   },
 });
 
