@@ -18,6 +18,10 @@ import { loader as landingLoader } from "./pages/Landing";
 import { loader as productsLoader } from "./pages/Products";
 import { loader as singleProductsLoader } from "./pages/SingleProduct";
 
+// Actions\
+
+import { action as registerUser } from "@/pages/Register";
+
 const router = createBrowserRouter([
   {
     path: "/",
