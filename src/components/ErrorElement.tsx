@@ -1,12 +1,14 @@
-import { useRouteError } from "react-router-dom"
+import { useRouteError } from "react-router-dom";
 
 function ErrorEelement() {
-  const error = useRouteError()
+  const error = useRouteError();
   console.log(error);
-  
+
   return (
-    <h4 className="font-bold text-4xl">there was an error...</h4>
-  )
+    <div className="flex justify-center items-center my-auto">
+      <h4 className="font-bold text-4xl">there was an error...</h4>
+    </div>
+  );
 }
 
-export default ErrorEelement
+export default ErrorEelement;

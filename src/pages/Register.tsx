@@ -6,6 +6,10 @@ import { customFetch } from "@/utils";
 import { toast } from "@/hooks/use-toast";
 import { AxiosError } from "axios";
 
+export const action: ActionFunction = async ({ request }): Promise<null> => {
+  return null;
+};
+
 function Register() {
   return (
     <section className="h-screen grid place-items-center">
