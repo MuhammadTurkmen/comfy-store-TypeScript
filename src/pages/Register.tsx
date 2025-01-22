@@ -9,7 +9,11 @@ import { AxiosError } from "axios";
 function Register() {
   return (
     <section className="h-screen grid place-items-center">
-      <Card className="w-96 bg-muted"></Card>
+      <Card className="w-96 bg-muted">
+        <CardHeader>
+          <CardTitle className="text-center">Register</CardTitle>
+        </CardHeader>
+      </Card>
     </section>
   );
 }
