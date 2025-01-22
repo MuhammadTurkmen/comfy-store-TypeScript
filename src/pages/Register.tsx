@@ -18,6 +18,15 @@ function Register() {
             <FormInput type="text" name="username" defaultValue="test" />
             <FormInput type="email" name="email" defaultValue="test@test.com" />
             <FormInput type="password" name="password" defaultValue="secret" />
+            <Button type="submit" variant="default" className="w-full mt-4">
+              Submit
+            </Button>
+            <p className="text-center mt-4">
+              Already member{" "}
+              <Button type="button" asChild variant={"link"}>
+                <Link to={"/login"}>Login</Link>
+              </Button>
+            </p>
           </Form>
         </CardContent>
       </Card>
