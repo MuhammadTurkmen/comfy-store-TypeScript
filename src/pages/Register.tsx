@@ -7,6 +7,10 @@ import { toast } from "@/hooks/use-toast";
 import { AxiosError } from "axios";
 
 function Register() {
-  return <div>Register</div>;
+  return (
+    <section className="h-screen grid place-items-center">
+      <Card className="w-96 bg-muted"></Card>
+    </section>
+  );
 }
 export default Register;
