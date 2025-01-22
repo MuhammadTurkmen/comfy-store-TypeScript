@@ -14,11 +14,11 @@ function Register() {
           <CardTitle className="text-center">Register</CardTitle>
         </CardHeader>
         <CardContent>
-          <Form>
+          <Form method="post">
             <FormInput type="text" name="username" defaultValue="test" />
             <FormInput type="email" name="email" defaultValue="test@test.com" />
             <FormInput type="password" name="password" defaultValue="secret" />
-            <Button type="submit" variant="default" className="w-full mt-4">
+            <Button type="submit" className="w-full mt-4">
               Submit
             </Button>
             <p className="text-center mt-4">
