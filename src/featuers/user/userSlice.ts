@@ -29,6 +29,10 @@ const userSlice = createSlice({
       state.user = user;
       localStorage.setItem("user", JSON.stringify(user));
       toast({ description: "Login Successful" });
+      if (user.username === "demo user") {
+        toast({ description: "Welcom Guest User" });
+        return;
+      }
     },
     logoutUser: (state) => {
       state.user = null;
