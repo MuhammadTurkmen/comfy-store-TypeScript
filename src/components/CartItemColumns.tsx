@@ -48,7 +48,13 @@ export const SecondColumn = ({
     </div>
   );
 };
-export const ThirdColumn = () => {
+export const ThirdColumn = ({
+  amount,
+  cartID,
+}: {
+  amount: number;
+  cartID: string;
+}) => {
   return <h4>Third Column</h4>;
 };
 export const FourthColumn = ({ price }: { price: string }) => {
