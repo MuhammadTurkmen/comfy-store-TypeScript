@@ -60,9 +60,18 @@ export const ThirdColumn = ({
   const removeItemFromCart = () => {
     dispatch(removeItem(cartID));
   };
+
+  const setAmount = (value: number) => {
+    dispatch(editItem({ cartID, amount: value }));
+  };
   return (
     <div>
-      <Button variant="link" className="-ml-4">
+      <SelectProductAmount
+        amount={amount}
+        setAmount={setAmount}
+        mode={Mode.CartItem}
+      />
+      <Button variant="link" className="-ml-4" onClick={removeItemFromCart}>
         remove
       </Button>
     </div>
