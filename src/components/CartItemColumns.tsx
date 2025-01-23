@@ -55,7 +55,13 @@ export const ThirdColumn = ({
   amount: number;
   cartID: string;
 }) => {
-  return <h4>Third Column</h4>;
+  return (
+    <div>
+      <Button variant="link" className="-ml-4">
+        remove
+      </Button>
+    </div>
+  );
 };
 export const FourthColumn = ({ price }: { price: string }) => {
   return <p className="font-medium sm:ml-auto">{formatAsDollars(price)}</p>;
