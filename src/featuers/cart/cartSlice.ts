@@ -11,7 +11,7 @@ const defaultState: CartState = {
   orderTotal: 0,
 };
 
-const getCartFromLocalStorage = (): CartItem => {
+const getCartFromLocalStorage = (): CartState => {
   const cart = localStorage.getItem("cart");
   return cart ? JSON.parse(cart) : defaultState;
 };
@@ -20,7 +20,15 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: getCartFromLocalStorage,
   reducers: {
-    addItem: () => {},
+    addItem: (state, action: PayloadAction<CartItem>) => {
+      const newCartItem = action.payload;
+      const item = state.cartItems.find((i) => i.cartID === newCartItem.cartID);
+      if (item) {
+        item.amount += newCartItem.amount;
+      } else {
+        state.cartItems.push(newCartItem);
+      }
+    },
     clearCart: () => {},
     removeItem: () => {},
     editItem: () => {},
