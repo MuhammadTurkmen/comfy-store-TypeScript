@@ -24,6 +24,7 @@ const cartSlice = createSlice({
     clearCart: () => {},
     removeItem: () => {},
     editItem: () => {},
+    calculateTotals: () => {},
   },
 });
 
