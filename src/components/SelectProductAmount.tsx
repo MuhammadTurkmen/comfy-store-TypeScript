@@ -36,7 +36,21 @@ function SelectProductAmount({
       <Select
         defaultValue={amount.toString()}
         onValueChange={(value) => setAmount(Number(value))}
-      ></Select>
+      >
+        <SelectTrigger className={cartItem ? "w-[75px]" : "w-[150px]"}>
+          <SelectValue placeholder={amount} />
+        </SelectTrigger>
+        <SelectContent>
+          {Array.from({ length: cartItem ? amount + 10 : 10 }, (_, index) => {
+            const selectValue = (index + 1).toString();
+            return (
+              <SelectItem key={index} value={selectValue}>
+                {selectValue}
+              </SelectItem>
+            );
+          })}
+        </SelectContent>
+      </Select>
     </>
   );
 }
