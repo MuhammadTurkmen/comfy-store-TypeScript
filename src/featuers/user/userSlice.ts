@@ -10,8 +10,12 @@ type USerState = {
   user: User | null;
 };
 
-const initialState = {
-  name: "user slice",
+const getUserFromLocalStorage = () : User | null {
+  const user = localStorage.getItem('user')
+}
+
+const initialState: USerState  = {
+  user: 
 };
 const userSlice = createSlice({
   name: "user",
