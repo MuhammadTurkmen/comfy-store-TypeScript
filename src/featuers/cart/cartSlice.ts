@@ -19,7 +19,12 @@ const getCartFromLocalStorage = (): CartItem => {
 const cartSlice = createSlice({
   name: "cart",
   initialState: getCartFromLocalStorage,
-  reducers: {},
+  reducers: {
+    addItem: () => {},
+    clearCart: () => {},
+    removeItem: () => {},
+    editItem: () => {},
+  },
 });
 
 export default cartSlice.reducer;
