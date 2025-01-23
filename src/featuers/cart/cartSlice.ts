@@ -10,6 +10,11 @@ const initialState: CartState = {
   tax: 0,
   orderTotal: 0,
 };
+
+const getCartFromLocalStorage = (): CartItem => {
+  const cart = localStorage.getItem("cart");
+};
+
 const cartSlice = createSlice({
   name: "cart",
   initialState,
