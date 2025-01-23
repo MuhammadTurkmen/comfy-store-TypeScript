@@ -55,6 +55,11 @@ export const ThirdColumn = ({
   amount: number;
   cartID: string;
 }) => {
+  const dispatch = useAppDispatch();
+
+  const removeItemFromCart = () => {
+    dispatch(removeItem(cartID));
+  };
   return (
     <div>
       <Button variant="link" className="-ml-4">
