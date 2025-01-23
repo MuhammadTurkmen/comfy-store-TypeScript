@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { type CartItem, type CartState } from "@/utils";
 import { Toast } from "@/components/ui/toast";
 
-const initialState: CartState = {
+const defaultState: CartState = {
   cartItems: [],
   numItemsInCart: 0,
   cartTotal: 0,
@@ -13,11 +13,12 @@ const initialState: CartState = {
 
 const getCartFromLocalStorage = (): CartItem => {
   const cart = localStorage.getItem("cart");
+  return cart ? JSON.parse(cart) : defaultState;
 };
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState,
+  initialState: getCartFromLocalStorage,
   reducers: {},
 });
 
