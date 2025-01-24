@@ -1,17 +1,19 @@
-import { Button } from "@/components/ui/button";
+import { useAppSelector } from "@/hooks";
+import { CartItemsList, SectionTitle, CartTotals } from "@/components";
 import { Link } from "react-router-dom";
-Button;
+import { Button } from "@/components/ui/button";
 
 function Cart() {
+  // temp
+  const user = null;
+
+  const numItemsInCart = useAppSelector(
+    (state) => state.cartState.numItemsInCart
+  );
+
   return (
     <div>
       <h1 className="text-4xl">Cart Page</h1>;
-      <Link to="/" className="text-7xl text-red-900">
-        back home
-      </Link>
-      <Button asChild size="lg">
-        <Link to="/">home button</Link>
-      </Button>
     </div>
   );
 }
