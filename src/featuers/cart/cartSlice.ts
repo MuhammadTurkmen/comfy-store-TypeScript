@@ -58,6 +58,11 @@ const cartSlice = createSlice({
       const cartItem = state.cartItems.find((i) => i.cartID === cartID);
       if (!cartItem) return;
 
+      state.numItemsInCart += amount - cartItem.amount;
+      state.cartTotal += Number(cartItem.price) * (amount - cartItem.amount);
+
+      cartSlice.caseReducers.calculateTotals(state);
+
       toast({ description: "Amount Updated" });
     },
     calculateTotals: (state) => {
