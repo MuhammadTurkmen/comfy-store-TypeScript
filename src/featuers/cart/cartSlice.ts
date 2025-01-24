@@ -50,7 +50,10 @@ const cartSlice = createSlice({
       cartSlice.caseReducers.calculateTotals(state);
       toast({ description: "Item removed from the cart" });
     },
-    editItem: () => {},
+    editItem: (
+      state,
+      action: PayloadAction<{ cartID: string; amount: number }>
+    ) => {},
     calculateTotals: (state) => {
       state.tax = 0.1 * state.cartTotal;
       state.orderTotal = state.cartTotal + state.shipping + state.tax;
