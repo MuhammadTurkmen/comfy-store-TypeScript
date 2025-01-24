@@ -53,7 +53,13 @@ const cartSlice = createSlice({
     editItem: (
       state,
       action: PayloadAction<{ cartID: string; amount: number }>
-    ) => {},
+    ) => {
+      const { cartID, amount } = action.payload;
+      const cartItem = state.cartItems.find((i) => i.cartID === cartID);
+      if (!cartItem) return;
+
+      toast({ description: "Amount Updated" });
+    },
     calculateTotals: (state) => {
       state.tax = 0.1 * state.cartTotal;
       state.orderTotal = state.cartTotal + state.shipping + state.tax;
