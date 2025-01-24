@@ -45,6 +45,9 @@ const cartSlice = createSlice({
       const cartItem = state.cartItems.find((i) => i.cartID === cartID);
       if (!cartItem) return;
       state.cartItems = state.cartItems.filter((i) => i.cartID !== cartID);
+      state.numItemsInCart -= cartItem.amount;
+      state.cartTotal -= Number(cartItem.price) * cartItem.amount;
+      cartSlice.caseReducers.calculateTotals(state);
     },
     editItem: () => {},
     calculateTotals: (state) => {
