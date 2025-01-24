@@ -28,6 +28,10 @@ const cartSlice = createSlice({
       } else {
         state.cartItems.push(newCartItem);
       }
+      state.numItemsInCart += newCartItem.amount;
+      state.cartTotal += Number(newCartItem.price) * newCartItem.amount;
+      state.tax = 0.1 * state.cartTotal;
+      state.orderTotal = state.cartTotal + state.shipping + state.tax;
     },
     clearCart: () => {},
     removeItem: () => {},
