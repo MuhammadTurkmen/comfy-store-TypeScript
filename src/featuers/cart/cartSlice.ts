@@ -38,8 +38,14 @@ const cartSlice = createSlice({
     },
     clearCart: () => {
       localStorage.setItem("cart", JSON.stringify(defaultState));
+      return defaultState;
     },
-    removeItem: () => {},
+    removeItem: (state, action: PayloadAction<string>) => {
+      const cartID = action.payload;
+      const cartItem = state.cartItems.find((i) => i.cartID === cartID);
+      if (!cartItem) return;
+      state.cartItems = state.cartItems.filter((i) => i.cartID !== cartID);
+    },
     editItem: () => {},
     calculateTotals: (state) => {
       state.tax = 0.1 * state.cartTotal;
