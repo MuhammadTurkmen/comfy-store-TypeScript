@@ -31,6 +31,7 @@ function SingleProduct() {
   const dollarsAmount = formatAsDollars(price);
   const [productColor, setProductColor] = useState(colors[0]);
   const [amount, setAmount] = useState(1);
+  const dispatch = useAppDispatch();
 
   const cartProduct: CartItem = {
     cartID: product.id + productColor,
@@ -44,7 +45,7 @@ function SingleProduct() {
   };
 
   const addToCart = () => {
-    console.log("add to cart");
+    dispatch(addItem(cartProduct));
   };
   return (
     <section>
