@@ -20,7 +20,12 @@ function CartItemList() {
             key={cartID}
             className="flex flex-col gap-y-4 sm:flex-row flex-wrap p-6 mb-8"
           >
-            Cart Item
+            <FirstColumn image={image} title={title} />
+            <FirstColumn
+              title={title}
+              company={company}
+              productColor={productColor}
+            />
           </Card>
         );
       })}
