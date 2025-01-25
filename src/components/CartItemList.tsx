@@ -1,5 +1,11 @@
 import { useAppSelector } from "@/hooks";
 import { Card } from "./ui/card";
+import {
+  FirstColumn,
+  SecondColumn,
+  ThirdColumn,
+  FourthColumn,
+} from "./CartItemColumns";
 
 function CartItemList() {
   const cartItems = useAppSelector((state) => state.cartState.cartItems);
