@@ -21,7 +21,15 @@ export const FirstColumn = ({
     />
   );
 };
-export const SecondColumn = () => {
+export const SecondColumn = ({
+  title,
+  company,
+  productColor,
+}: {
+  title: string;
+  company: string;
+  productColor: string;
+}) => {
   return <h4>Second Column</h4>;
 };
 export const ThirdColumn = () => {
