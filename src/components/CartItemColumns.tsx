@@ -51,6 +51,6 @@ export const SecondColumn = ({
 export const ThirdColumn = () => {
   return <h4>Third Column</h4>;
 };
-export const FourthColumn = () => {
-  return <h4>Fourth Column</h4>;
+export const FourthColumn = ({ price }: { price: string }) => {
+  return <p className="font-medium sm:ml-auto"></p>;
 };
