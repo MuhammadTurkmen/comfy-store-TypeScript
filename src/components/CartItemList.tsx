@@ -11,7 +11,7 @@ function CartItemList() {
           cartItem;
         return (
           <Card
-            key={cartItem.cartID}
+            key={cartID}
             className="flex flex-col gap-y-4 sm:flex-row flex-wrap p-6 mb-8"
           >
             Cart Item
