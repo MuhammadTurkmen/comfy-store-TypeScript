@@ -7,6 +7,8 @@ function CartItemList() {
   return (
     <div>
       {cartItems.map((cartItem) => {
+        const { cartID, title, price, image, amount, company, productColor } =
+          cartItem;
         return (
           <Card
             key={cartItem.cartID}
