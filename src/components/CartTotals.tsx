@@ -11,6 +11,7 @@ function CartTotals() {
     <Card className="p-8 bg-muted">
       <CartTotalsRow label="Subtotal" amount={cartTotal} />
       <CartTotalsRow label="Shipping" amount={shipping} />
+      <CartTotalsRow label="Tax" amount={tax} />
     </Card>
   );
 }
