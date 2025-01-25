@@ -4,7 +4,15 @@ import { Card, CardTitle } from "@/components/ui/card";
 import { Separator } from "./ui/separator";
 
 function CartTotals() {
-  return <div>CartTotals</div>;
+  const { cartTotal, shipping, tax, orderTotal } = useAppSelector(
+    (state) => state.cartState
+  );
+  return (
+    <Card className="p-8 bg-muted">
+      <CartTotalsRow label="Subtotal" amount={cartTotal} />
+      <CartTotalsRow label="Shipping" amount={shipping} />
+    </Card>
+  );
 }
 
 export default CartTotals;
