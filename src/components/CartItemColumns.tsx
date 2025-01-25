@@ -30,7 +30,12 @@ export const SecondColumn = ({
   company: string;
   productColor: string;
 }) => {
-  return <h4>Second Column</h4>;
+  return (
+    <div className="sm:ml-4 md:ml-12 sm:w-48">
+      <h3 className="capitalize font-medium">{title}</h3>
+      <h4 className="mt-2 capitalize text-sm">{company}</h4>
+    </div>
+  );
 };
 export const ThirdColumn = () => {
   return <h4>Third Column</h4>;
