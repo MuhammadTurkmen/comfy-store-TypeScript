@@ -12,6 +12,9 @@ function CartTotals() {
       <CartTotalsRow label="Subtotal" amount={cartTotal} />
       <CartTotalsRow label="Shipping" amount={shipping} />
       <CartTotalsRow label="Tax" amount={tax} />
+      <CardTitle className="mt-8">
+        <CartTotalsRow label="Order Total" amount={orderTotal} lastRow />
+      </CardTitle>
     </Card>
   );
 }
