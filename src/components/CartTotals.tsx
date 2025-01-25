@@ -8,3 +8,13 @@ function CartTotals() {
 }
 
 export default CartTotals;
+
+function CartTotalsRow({
+  label,
+  amount,
+  lastRow,
+}: {
+  label: string;
+  amount: number;
+  lastRow?: boolean;
+});
