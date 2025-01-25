@@ -13,7 +13,13 @@ export const FirstColumn = ({
   title: string;
   image: string;
 }) => {
-  return <img src={image} alt={title} />;
+  return (
+    <img
+      src={image}
+      alt={title}
+      className="h-24 w-24 rounded-lg sm:h-32 sm:w-32 object-cover"
+    />
+  );
 };
 export const SecondColumn = () => {
   return <h4>Second Column</h4>;
