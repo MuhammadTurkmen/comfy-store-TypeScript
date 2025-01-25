@@ -27,6 +27,7 @@ function CartItemList() {
               productColor={productColor}
             />
             <ThirdColumn amount={amount} cartID={cartID} />
+            <FourthColumn price={price} />
           </Card>
         );
       })}
