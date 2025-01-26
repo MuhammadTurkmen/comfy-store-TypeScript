@@ -4,6 +4,12 @@ import { LoaderFunction, redirect } from "react-router-dom";
 import { type ReduxStore } from "@/store";
 import { toast } from "@/hooks/use-toast";
 
+export const loader =
+  (store: ReduxStore): LoaderFunction =>
+  async (): Promise<null> => {
+    return null;
+  };
+
 function Checkout() {
   const cartTotal = useAppSelector((state) => state.cartState.cartTotal);
   if (cartTotal === 0) {
@@ -13,7 +19,10 @@ function Checkout() {
   return (
     <>
       <SectionTitle text="Place your order" />
-      <div className="mt-8 grid gap-8 md-grid-cols-2 items-start"></div>
+      <div className="mt-8 grid gap-8 md:grid-cols-2 items-start">
+        <CheckoutForm />
+        <CartTotals />
+      </div>
     </>
   );
 }
