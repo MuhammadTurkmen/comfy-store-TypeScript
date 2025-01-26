@@ -7,7 +7,7 @@ import { toast } from "@/hooks/use-toast";
 export const loader =
   (store: ReduxStore): LoaderFunction =>
   async (): Promise<null> => {
-    const user = store.getState();
+    const user = store.getState().userState.user;
     return null;
   };
 
