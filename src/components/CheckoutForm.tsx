@@ -27,6 +27,15 @@ export const action =
     const { cartItems, orderTotal, numItemsInCart } =
       store.getState().cartState;
 
+    const info: Checkout = {
+      name,
+      address,
+      chargeTotal: orderTotal,
+      orderTotal: formatAsDollars(orderTotal),
+      cartItems,
+      numItemsInCart,
+    };
+
     return null;
   };
 
