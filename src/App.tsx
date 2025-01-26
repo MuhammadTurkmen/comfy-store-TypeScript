@@ -17,7 +17,7 @@ import { ErrorElement } from "./components";
 import { loader as landingLoader } from "./pages/Landing";
 import { loader as productsLoader } from "./pages/Products";
 import { loader as singleProductsLoader } from "./pages/SingleProduct";
-
+import { loader as checkoutLoader } from "./pages/Checkout";
 // Actions\
 
 import { action as registerUser } from "@/pages/Register";
