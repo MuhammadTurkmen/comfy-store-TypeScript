@@ -9,7 +9,7 @@ import { clearCart } from "@/featuers/cart/cartSlice";
 
 export const action =
   (store: ReduxStore): ActionFunction =>
-  async ({ request }): Promise<null> => {
+  async ({ request }): Promise<Response | null> => {
     const formData = await request.formData();
     const name = formData.get("name") as string;
     const address = formData.get("address") as string;
@@ -18,7 +18,11 @@ export const action =
       toast({ description: "please fill out all fields" });
       return null;
     }
-
+    const user = store.getState().userState.user;
+    if (!user) {
+      toast({ description: "please login to place an order" });
+      return redirect("/login");
+    }
     return null;
   };
 
