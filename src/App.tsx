@@ -61,6 +61,7 @@ const router = createBrowserRouter([
         path: "checkout",
         element: <Checkout />,
         errorElement: <ErrorElement />,
+        loader: checkoutLoader(store),
       },
       {
         path: "orders",
