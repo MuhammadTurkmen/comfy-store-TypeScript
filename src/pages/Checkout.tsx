@@ -8,6 +8,10 @@ export const loader =
   (store: ReduxStore): LoaderFunction =>
   async (): Promise<null> => {
     const user = store.getState().userState.user;
+
+    if (!user) {
+      toast({ description: "Please Login To Continue" });
+    }
     return null;
   };
 
