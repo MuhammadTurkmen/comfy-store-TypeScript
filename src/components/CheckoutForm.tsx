@@ -10,6 +10,7 @@ import { clearCart } from "@/featuers/cart/cartSlice";
 export const action =
   (store: ReduxStore): ActionFunction =>
   async ({ request }): Promise<null> => {
+    const formData = await request.formData();
     return null;
   };
 
