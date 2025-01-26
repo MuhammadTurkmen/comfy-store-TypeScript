@@ -23,6 +23,10 @@ export const action =
       toast({ description: "please login to place an order" });
       return redirect("/login");
     }
+
+    const { cartItems, orderTotal, numItemsInCart } =
+      store.getState().cartState;
+
     return null;
   };
 
