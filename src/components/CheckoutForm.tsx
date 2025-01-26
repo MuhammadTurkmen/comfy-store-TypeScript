@@ -7,6 +7,12 @@ import { ReduxStore } from "@/store";
 import { toast } from "@/hooks/use-toast";
 import { clearCart } from "@/featuers/cart/cartSlice";
 
+export const action =
+  (store: ReduxStore): ActionFunction =>
+  async ({ request }): Promise<null> => {
+    return null;
+  };
+
 function CheckoutForm() {
   return (
     <Form method="post" className="flex flex-col gap-y-4">
