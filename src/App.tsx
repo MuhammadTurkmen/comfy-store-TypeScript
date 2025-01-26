@@ -22,6 +22,7 @@ import { loader as checkoutLoader } from "./pages/Checkout";
 
 import { action as registerUser } from "@/pages/Register";
 import { action as loginUser } from "@/pages/Login";
+import { action as checkoutAction } from "./pages/Checkout";
 import { store } from "./store";
 
 const router = createBrowserRouter([
