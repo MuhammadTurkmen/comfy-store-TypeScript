@@ -40,6 +40,11 @@ export const loader =
 
 function Orders() {
   const { meta, data } = useLoaderData() as OrdersResponse;
+  console.log(data);
+  if (meta.pagination.total < 1) {
+    return <SectionTitle text="please make an order" />;
+  }
+
   return <div>Orders</div>;
 }
 export default Orders;
