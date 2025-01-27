@@ -47,6 +47,9 @@ export const action =
         }
       );
       console.log(result);
+      store.dispatch(clearCart());
+      toast({ description: "order placed" });
+      return redirect("/orders");
     } catch (error) {
       toast({ description: "order failed" });
       return null;
