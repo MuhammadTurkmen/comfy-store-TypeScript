@@ -70,6 +70,7 @@ const router = createBrowserRouter([
         path: "orders",
         element: <Orders />,
         errorElement: <ErrorElement />,
+        loader: ordersLoader(store),
       },
     ],
   },
