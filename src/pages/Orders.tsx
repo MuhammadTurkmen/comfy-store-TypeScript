@@ -39,6 +39,7 @@ export const loader =
   };
 
 function Orders() {
+  const { meta, data } = useLoaderData() as OrdersResponse;
   return <div>Orders</div>;
 }
 export default Orders;
