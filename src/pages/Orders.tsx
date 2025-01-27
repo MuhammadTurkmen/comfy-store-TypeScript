@@ -25,9 +25,16 @@ export const loader =
     ]);
 
     try {
-    } catch (error) {}
-
-    return null;
+      const response = await customFetch.get<OrdersResponse>("/orders", {
+        params,
+        headers: {
+          Authorization: `bearer ${user.jwt}`,
+        },
+      });
+    } catch (error) {
+      toast({ description: "Faild to fetch orders" });
+      return null;
+    }
   };
 
 function Orders() {
