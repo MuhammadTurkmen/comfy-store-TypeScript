@@ -82,7 +82,6 @@ export type Checkout = {
   numItemsInCart: number;
 };
 
-
 export type Order = {
   id: number;
   attributes: {
@@ -104,3 +103,4 @@ export type OrdersMeta = {
 export type OrdersResponse = {
   data: Order[];
   meta: OrdersMeta;
+};
