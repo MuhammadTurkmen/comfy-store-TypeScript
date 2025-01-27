@@ -10,6 +10,10 @@ import { ReduxStore } from "@/store";
 import { type OrdersResponse } from "@/utils";
 import { toast } from "@/hooks/use-toast";
 
+export const loader =
+  (store: ReduxStore): LoaderFunction =>
+  async ({ request }): Promise<OrdersResponse> => {};
+
 function Orders() {
   return <div>Orders</div>;
 }
