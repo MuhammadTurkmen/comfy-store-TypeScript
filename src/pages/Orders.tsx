@@ -24,6 +24,9 @@ export const loader =
       ...new URL(request.url).searchParams.entries(),
     ]);
 
+    try {
+    } catch (error) {}
+
     return null;
   };
 
