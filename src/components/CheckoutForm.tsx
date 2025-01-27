@@ -37,6 +37,7 @@ export const action =
     };
 
     try {
+      const result = await customFetch.post("/orders", { data: info });
     } catch (error) {
       toast({ description: "order failed" });
       return null;
