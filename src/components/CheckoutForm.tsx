@@ -37,7 +37,15 @@ export const action =
     };
 
     try {
-      const result = await customFetch.post("/orders", { data: info });
+      const result = await customFetch.post(
+        "/orders",
+        { data: info },
+        {
+          headers: {
+            Authorization: `Bearer ${user.jwt}`,
+          },
+        }
+      );
     } catch (error) {
       toast({ description: "order failed" });
       return null;
