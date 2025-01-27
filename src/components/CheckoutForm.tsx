@@ -46,6 +46,7 @@ export const action =
           },
         }
       );
+      console.log(result);
     } catch (error) {
       toast({ description: "order failed" });
       return null;
