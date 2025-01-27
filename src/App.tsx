@@ -1,7 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import {
-  Error,
   About,
   Cart,
   Checkout,

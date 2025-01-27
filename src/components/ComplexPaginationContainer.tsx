@@ -16,22 +16,8 @@ function ComplexPaginationContainer() {
   const { pageCount, page } = meta.pagination;
 
   const { search, pathname } = useLocation();
-  const pages = Array.from({ length: pageCount }, (_, index) => index + 1);
 
   if (pageCount < 2) return null;
-
-  // const renderPagination = pages.map((pageNumber) => {
-  //   const isActive = pageNumber === page;
-  //   const url = constructUrl({ pageNumber, search, pathname });
-
-  //   return (
-  //     <PaginationItem key={pageNumber}>
-  //       <PaginationLink to={url} isActive={isActive}>
-  //         {pageNumber}
-  //       </PaginationLink>
-  //     </PaginationItem>
-  //   );
-  // });
 
   const renderPagination = () => {
     let pages: React.ReactNode[] = [];

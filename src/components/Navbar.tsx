@@ -1,11 +1,4 @@
-import {
-  LinksDropdown,
-  Logo,
-  CartButton,
-  Header,
-  ModeToggle,
-  NavLinks,
-} from ".";
+import { LinksDropdown, Logo, CartButton, ModeToggle, NavLinks } from ".";
 
 function Navbar() {
   return (

@@ -1,5 +1,4 @@
-import { useRouteError, Link, isRouteErrorResponse } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { useRouteError, isRouteErrorResponse } from "react-router-dom";
 
 function Error() {
   const error = useRouteError();
