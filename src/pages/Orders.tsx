@@ -12,7 +12,9 @@ import { toast } from "@/hooks/use-toast";
 
 export const loader =
   (store: ReduxStore): LoaderFunction =>
-  async ({ request }): Promise<OrdersResponse | Response | null> => {};
+  async ({ request }): Promise<OrdersResponse | Response | null> => {
+    return null;
+  };
 
 function Orders() {
   return <div>Orders</div>;
