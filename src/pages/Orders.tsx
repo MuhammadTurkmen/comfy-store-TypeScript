@@ -31,6 +31,7 @@ export const loader =
           Authorization: `bearer ${user.jwt}`,
         },
       });
+      return { ...response.data };
     } catch (error) {
       toast({ description: "Faild to fetch orders" });
       return null;
