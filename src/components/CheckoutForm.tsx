@@ -36,7 +36,11 @@ export const action =
       numItemsInCart,
     };
 
-    return null;
+    try {
+    } catch (error) {
+      toast({ description: "order failed" });
+      return null;
+    }
   };
 
 function CheckoutForm() {
