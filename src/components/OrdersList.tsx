@@ -20,6 +20,10 @@ function OrdersList() {
       <h4 className="mb-4 capitalize">
         Totale orders : {meta.pagination.total}
       </h4>
+      <Table>
+        <TableCaption>A list of your recent orders</TableCaption>
+        <TableHead></TableHead>
+      </Table>
     </div>
   );
 }
