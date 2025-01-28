@@ -35,7 +35,15 @@ function OrdersList() {
           {orders.map((order) => {
             const { name, address, numItemsInCart, orderTotal, createdAt } =
               order.attributes;
-            return <TableRow></TableRow>;
+            return (
+              <TableRow key={order.id}>
+                <TableCell>{name}</TableCell>
+                <TableCell>{address}</TableCell>
+                <TableCell className="text-center">{numItemsInCart}</TableCell>
+                <TableCell>{orderTotal}</TableCell>
+                <TableCell>{new Date(createdAt).toDateString()}</TableCell>
+              </TableRow>
+            );
           })}
         </TableBody>
       </Table>
