@@ -45,6 +45,12 @@ function Orders() {
     return <SectionTitle text="please make an order" />;
   }
 
-  return <div>Orders</div>;
+  return (
+    <>
+      <SectionTitle text="Your Orders" />;
+      <OrdersList />
+      <ComplexPaginationContainer />
+    </>
+  );
 }
 export default Orders;
