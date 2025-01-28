@@ -44,13 +44,28 @@ function ComplexPaginationContainer() {
     pathname,
   });
 
+  const constructButton = ({
+    pageNumber,
+    isActive,
+  }: {
+    pageNumber: number;
+    isActive: boolean;
+  }): React.ReactNode => {
+    const url = constructUrl({ pageNumber, search, pathname });
+    return (
+      <PaginationItem key={pageNumber}>
+        <PaginationLink to={url} isActive={isActive}></PaginationLink>
+      </PaginationItem>
+    );
+  };
+
   return (
     <Pagination className="mt-16">
       <PaginationContent>
         <PaginationItem>
           <PaginationPrevious to={prevUrl} />
         </PaginationItem>
-        {renderPagination}
+        {renderPagination()}
         <PaginationItem>
           <PaginationNext to={nextUrl} />
         </PaginationItem>
