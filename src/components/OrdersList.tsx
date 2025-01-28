@@ -27,7 +27,7 @@ function OrdersList() {
             <TableHead>Name</TableHead>
             <TableHead>Address</TableHead>
             <TableHead className="w-[100px]">Products</TableHead>
-            <TableHead>Cost</TableHead>
+            <TableHead className="w-[100px]">Cost</TableHead>
             <TableHead>Date</TableHead>
           </TableRow>
         </TableHead>
