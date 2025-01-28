@@ -47,7 +47,7 @@ function Orders() {
 
   return (
     <>
-      <SectionTitle text="Your Orders" />;
+      <SectionTitle text="Your Orders" />
       <OrdersList />
       <ComplexPaginationContainer />
     </>

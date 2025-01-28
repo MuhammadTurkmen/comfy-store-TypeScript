@@ -22,7 +22,7 @@ function OrdersList() {
       </h4>
       <Table>
         <TableCaption>A list of your recent orders</TableCaption>
-        <TableHead>
+        <TableHeader>
           <TableRow>
             <TableHead>Name</TableHead>
             <TableHead>Address</TableHead>
@@ -30,7 +30,7 @@ function OrdersList() {
             <TableHead className="w-[100px]">Cost</TableHead>
             <TableHead>Date</TableHead>
           </TableRow>
-        </TableHead>
+        </TableHeader>
         <TableBody>
           {orders.map((order) => {
             const { name, address, numItemsInCart, orderTotal, createdAt } =
