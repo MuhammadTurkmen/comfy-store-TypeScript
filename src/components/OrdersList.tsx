@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/table";
 
 function OrdersList() {
+  const { data: orders, meta } = useLoaderData() as OrdersResponse;
   return <div>OrdersList</div>;
 }
 
