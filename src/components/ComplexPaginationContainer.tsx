@@ -5,7 +5,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-  PaginationEllipsis
+  PaginationEllipsis,
 } from "@/components/ui/pagination";
 import { OrdersResponse, constructUrl, constructPrevOrNextUrl } from "@/utils";
 
@@ -73,8 +73,13 @@ function ComplexPaginationContainer() {
     );
   };
 
-
-  const constructEllipsis = (key:string): React.ReactNode
+  const constructEllipsis = (key: string): React.ReactNode => {
+    return (
+      <PaginationItem key={key}>
+        <PaginationEllipsis />
+      </PaginationItem>
+    );
+  };
 
   return (
     <Pagination className="mt-16">
