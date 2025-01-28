@@ -22,7 +22,12 @@ function OrdersList() {
       </h4>
       <Table>
         <TableCaption>A list of your recent orders</TableCaption>
-        <TableHead></TableHead>
+        <TableHead>
+          <TableRow>
+            <TableHead>Name</TableHead>
+            <TableHead></TableHead>
+          </TableRow>
+        </TableHead>
       </Table>
     </div>
   );
