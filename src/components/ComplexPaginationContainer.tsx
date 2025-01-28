@@ -54,7 +54,9 @@ function ComplexPaginationContainer() {
     const url = constructUrl({ pageNumber, search, pathname });
     return (
       <PaginationItem key={pageNumber}>
-        <PaginationLink to={url} isActive={isActive}></PaginationLink>
+        <PaginationLink to={url} isActive={isActive}>
+          {pageNumber}
+        </PaginationLink>
       </PaginationItem>
     );
   };
