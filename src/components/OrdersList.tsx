@@ -25,7 +25,10 @@ function OrdersList() {
         <TableHead>
           <TableRow>
             <TableHead>Name</TableHead>
-            <TableHead></TableHead>
+            <TableHead>Address</TableHead>
+            <TableHead>Products</TableHead>
+            <TableHead>Cost</TableHead>
+            <TableHead>Date</TableHead>
           </TableRow>
         </TableHead>
       </Table>
