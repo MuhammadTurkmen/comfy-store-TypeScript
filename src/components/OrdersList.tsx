@@ -14,7 +14,14 @@ import {
 
 function OrdersList() {
   const { data: orders, meta } = useLoaderData() as OrdersResponse;
-  return <div>OrdersList</div>;
+
+  return (
+    <div className="mt-16">
+      <h4 className="mb-4 capitalize">
+        Totale orders : {meta.pagination.total}
+      </h4>
+    </div>
+  );
 }
 
 export default OrdersList;
