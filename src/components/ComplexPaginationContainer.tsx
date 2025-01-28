@@ -37,9 +37,19 @@ function ComplexPaginationContainer() {
     let pages: React.ReactNode[] = [];
     // first page
     pages.push(constructButton({ pageNumber: 1, isActive: page === 1 }));
+
+    // ellipsis
+    if (page > 2) {
+      pages.push(constructEllipsis("dotes-1"));
+    }
     // active page
     if (page !== 1 && page !== pageCount) {
       pages.push(constructButton({ pageNumber: page, isActive: true }));
+    }
+
+    // ellipsis
+    if (page < pageCount - 1) {
+      pages.push(constructEllipsis("dotes-2"));
     }
 
     // last page
