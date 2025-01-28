@@ -31,6 +31,13 @@ function OrdersList() {
             <TableHead>Date</TableHead>
           </TableRow>
         </TableHead>
+        <TableBody>
+          {orders.map((order) => {
+            const { name, address, numItemsInCart, orderTotal, createdAt } =
+              order.attributes;
+            return <TableRow></TableRow>;
+          })}
+        </TableBody>
       </Table>
     </div>
   );
