@@ -5,6 +5,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
+  PaginationEllipsis
 } from "@/components/ui/pagination";
 import { OrdersResponse, constructUrl, constructPrevOrNextUrl } from "@/utils";
 
@@ -34,6 +35,17 @@ function ComplexPaginationContainer() {
 
   const renderPagination = () => {
     let pages: React.ReactNode[] = [];
+    // first page
+    pages.push(constructButton({ pageNumber: 1, isActive: page === 1 }));
+    // active page
+    if (page !== 1 && page !== pageCount) {
+      pages.push(constructButton({ pageNumber: page, isActive: true }));
+    }
+
+    // last page
+    pages.push(
+      constructButton({ pageNumber: pageCount, isActive: page === pageCount })
+    );
     return pages;
   };
 
@@ -60,6 +72,9 @@ function ComplexPaginationContainer() {
       </PaginationItem>
     );
   };
+
+
+  const constructEllipsis = (key:string): React.ReactNode
 
   return (
     <Pagination className="mt-16">
